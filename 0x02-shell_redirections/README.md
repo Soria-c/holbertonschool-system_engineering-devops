@@ -1,1 +1,1 @@
-In this project we will create some shell sripts to manipulate shell redirections
+In this project we will create some shell scripts to manipulate shell redirections
