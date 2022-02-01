@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt | grep '^-'| rev | cut -d " " -f1 | rev
+ls -1t | head
