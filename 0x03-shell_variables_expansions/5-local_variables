@@ -1,2 +1,2 @@
 #!/bin/bash
- set | grep '^[[:alpha:]]' | sort
+set | grep '^[[:alpha:]]' | sort --ignore-case
