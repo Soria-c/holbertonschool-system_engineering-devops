@@ -1,2 +1,2 @@
 #!/bin/bash
-set | grep -i --regexp='^[[:alpha:]]' --regexp='^_' | sort
+set | grep --regexp='^[[:alpha:]]' --regexp='^_'
