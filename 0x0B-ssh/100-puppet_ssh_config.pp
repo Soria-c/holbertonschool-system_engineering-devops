@@ -1,4 +1,4 @@
-#!/usr/bin/puppet/env puppet
+#!/usr/bin/env pup
 # Script to modify the ssh_config file
 
 file {'/etc/ssh/ssh_config':
