@@ -1,6 +1,6 @@
 # Script that ensures a Python package is installed
 
-package { 'flask=2.1.0':
-    ensure   => 'installed',
+package { 'flask':
+    ensure   => '2.1.0',
     provider => 'pip3',
 }
