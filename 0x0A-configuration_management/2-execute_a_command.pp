@@ -2,5 +2,4 @@
 
 exec {'pkill':
     command => ['/bin/pkill', 'killmenow'],
-    user    => 'root',
 }
