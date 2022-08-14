@@ -1,6 +1,4 @@
-#!/usr/bin/env pup
 # Script to modify the ssh_config file
-
 file {'/etc/ssh/ssh_config':
     ensure => present,
 }
@@ -8,11 +6,11 @@ file {'/etc/ssh/ssh_config':
 file_line {'PasswordAuthentication':
     ensure => present,
     path => '/etc/ssh/ssh_config',
-    match => '^PasswordAuthentication ?(:?yes|no)?'
-    line => 'PasswordAuthentication no'
+    match => '^PasswordAuthentication ?(:?yes|no)?',
+    line => 'PasswordAuthentication no',
 }
 
 file_line {'Indentityfile':
     path => '/etc/ssh/ssh_config',
-    line => 'IdentityFile ~/.ssh/school'
+    line => 'IdentityFile ~/.ssh/school',
 }
