@@ -2,11 +2,11 @@
 # Script to modify the ssh_config file
 
 file {'/etc/ssh/ssh_config':
-    ensure => 'present',
+    ensure => present,
 }
 
 file_line {'PasswordAuthentication':
-    ensure => 'present',
+    ensure => present,
     path => '/etc/ssh/ssh_config',
     match => '^PasswordAuthentication ?(:?yes|no)?'
     line => 'PasswordAuthentication no'
