@@ -6,6 +6,6 @@ sudo apt install nginx -y
 sudo ufw allow 'Nginx HTTP'
 echo "Hello World" > /var/www/html/index.nginx-debian.html
 echo "Ceci n'est pas une page" > /var/www/html/error-404.html
-new="server_name _;\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n\t}\n\terror_page 404 \/error-404.html;\n\t\t location \/error-404.html {\n\t\tinternal\n\t\t}\n"
+new="server_name _;\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n\t}\n\terror_page 404 \/error-404.html;\n\t\t location \/error-404.html {\n\t\tinternal;\n\t\t}\n"
 sudo sed -i "s/server_name _;/${new}/" /etc/nginx/sites-available/default
 sudo service nginx restart
