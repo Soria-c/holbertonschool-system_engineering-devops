@@ -5,6 +5,12 @@ package { 'nginx':
     provider => 'apt',
 }
 
+exec { 'port 80':
+    command => "ufw allow 'Nginx HTTP'",
+    user    => 'root',
+    path    => '/usr/sbin/ufw',
+}
+
 file { 'index.nginx-debian.html':
     path    => '/var/www/html/index.nginx-debian.html',
     content => 'Hellow World',
@@ -19,4 +25,5 @@ file_line { 'redirection':
 exec { 'start service':
     command => 'service nginx start',
     path    => '/usr/sbin/service',
+    user    => 'root',
 }
