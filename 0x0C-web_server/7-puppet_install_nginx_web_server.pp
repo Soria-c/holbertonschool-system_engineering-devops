@@ -19,7 +19,7 @@ file { 'index.nginx-debian.html':
 file_line { 'redirection':
     path  => '/etc/nginx/sites-available/default',
     after => 'server_name _;',
-    line  => '\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n\t}\n',
+    line  => '\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n',
 }
 
 exec { 'start service':
