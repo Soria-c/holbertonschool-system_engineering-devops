@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from requests import get
 """Api test"""
+from requests import get
 
 
 def top_ten(subreddit):
